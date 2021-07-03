@@ -1,5 +1,5 @@
 const { performance } = require('perf_hooks');
-const testStringLong = require('./testStringLong.js') 
+// const testStringLong = require('./testStringLong.js') 
 
 const noArrayWithTrim = function(str) {
   let trimStr = str.trim()
@@ -18,8 +18,10 @@ const noArrayWithTrim = function(str) {
   return returnStr
 }
 
+const testString = '   Test   String   Test   String   Test   '
+
 const t0 = performance.now()
-const test = noArrayWithTrim(testStringLong)
+const test = noArrayWithTrim(testString)
 const t1 = performance.now()
 
 console.log(t1 - t0)
