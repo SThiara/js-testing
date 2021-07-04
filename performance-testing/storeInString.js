@@ -1,5 +1,5 @@
 const { performance } = require('perf_hooks');
-// const testStringLong = require('./testStringLong.js') 
+const testStringLong = require('./testStringLong.js') 
 
 const usingArrayStoreString = function(str) {
   const splitStr = str.trim().split(' ').reverse()
@@ -18,7 +18,7 @@ const usingArrayStoreString = function(str) {
 const testString = '   Test   String   Test   String   Test   '
 
 const t0 = performance.now()
-const test = usingArrayStoreString(testString)
+const test = usingArrayStoreString(testStringLong)
 const t1 = performance.now()
 
 console.log(t1 - t0)
